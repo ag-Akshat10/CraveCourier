@@ -1,8 +1,10 @@
 import './App.css'
-import Login from "@/auth/Login.tsx";
+
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import MainLayout from "@/MainLayout.tsx";
 import Signup from "@/auth/Signup.tsx";
+// @ts-ignore
+import Login from "@/auth/Login.tsx";
 
 const appRouter=createBrowserRouter([
   {
