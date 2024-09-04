@@ -1,23 +1,28 @@
 
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
-import MainLayout from "@/MainLayout.tsx";
+
 import Signup from "@/auth/Signup.tsx";
 // @ts-ignore
 import Login from "@/auth/Login.tsx";
 import ForgotPassword from "@/auth/ForgotPassword.tsx";
 import ResetPassword from "@/auth/ResetPassword.tsx";
 import VerifyEmail from "@/auth/VerifyEmail.tsx";
+import HereSection from "@/components/HereSection.tsx";
+import MainLayout from "@/layout/MainLayout.tsx";
+
+
 
 const appRouter=createBrowserRouter([
   {
     path:"/",
     element:<MainLayout/>,
-    // children:[
-    //   {
-    //     path:"/login"
-    //   }
-    // ]
+    children:[
+      {
+        path:"/",
+        element:<HereSection/>
+      }
+    ]
   },
   {
     path:"/login",
