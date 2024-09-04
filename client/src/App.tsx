@@ -10,6 +10,8 @@ import ResetPassword from "@/auth/ResetPassword.tsx";
 import VerifyEmail from "@/auth/VerifyEmail.tsx";
 import HereSection from "@/components/HereSection.tsx";
 import MainLayout from "@/layout/MainLayout.tsx";
+import Profile from "@/components/Profile.tsx";
+import SearchPage from "@/components/SearchPage.tsx";
 
 
 
@@ -21,7 +23,15 @@ const appRouter=createBrowserRouter([
       {
         path:"/",
         element:<HereSection/>
-      }
+      },
+      {
+        path:"/profile",
+        element:<Profile/>
+      },
+      {
+        path:"/search/:text",
+        element:<SearchPage/>
+      },
     ]
   },
   {
