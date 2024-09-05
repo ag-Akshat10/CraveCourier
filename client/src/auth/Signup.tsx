@@ -25,6 +25,7 @@ const Signup=() => {
     const loginSubmitHandler = async (e: FormEvent) => {
         e.preventDefault();
         const result = userSignupSchema.safeParse(input);
+        // checking form validation
         if(!result.success){
             const fieldErrors = result.error.formErrors.fieldErrors;
             setErrors(fieldErrors as Partial<SignupInputState>);

@@ -7,11 +7,13 @@ import Signup from "@/auth/Signup.tsx";
 import Login from "@/auth/Login.tsx";
 import ForgotPassword from "@/auth/ForgotPassword.tsx";
 import ResetPassword from "@/auth/ResetPassword.tsx";
-import VerifyEmail from "@/auth/VerifyEmail.tsx";
+
 import HereSection from "@/components/HereSection.tsx";
 import MainLayout from "@/layout/MainLayout.tsx";
 import Profile from "@/components/Profile.tsx";
 import SearchPage from "@/components/SearchPage.tsx";
+import RestaurantDetail from "@/components/ReastaurantDetail.tsx";
+import Cart from "@/components/Cart.tsx";
 
 
 
@@ -32,6 +34,14 @@ const appRouter=createBrowserRouter([
         path:"/search/:text",
         element:<SearchPage/>
       },
+      {
+        path: "/restaurant/:id",
+        element: <RestaurantDetail/>,
+      },
+      {
+        path: "/cart",
+        element: <Cart/>,
+      },
     ]
   },
   {
@@ -50,10 +60,8 @@ const appRouter=createBrowserRouter([
     path: "/reset-password",
     element: <ResetPassword/>,
   },
-  {
-    path: "/verify-email",
-    element: <VerifyEmail/>,
-  },
+
+
 
 ])
 function App() {
