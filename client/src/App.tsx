@@ -14,6 +14,10 @@ import Profile from "@/components/Profile.tsx";
 import SearchPage from "@/components/SearchPage.tsx";
 import RestaurantDetail from "@/components/ReastaurantDetail.tsx";
 import Cart from "@/components/Cart.tsx";
+import Restaurant from "@/admin/Restaurant.tsx";
+import AddMenu from "@/admin/AddMenu.tsx";
+import Orders from "@/admin/Orders.tsx";
+import Success from "@/components/Success.tsx";
 
 
 
@@ -42,6 +46,22 @@ const appRouter=createBrowserRouter([
         path: "/cart",
         element: <Cart/>,
       },
+      {
+        path: "/order/status",
+        element: <Success/>,
+      },
+      {
+        path: "/admin/restaurant",
+        element: <Restaurant/>,
+      },
+      {
+        path: "/admin/menu",
+        element: <AddMenu/>,
+      },
+      {
+        path:"/admin/orders",
+        element:<Orders/>
+      },
     ]
   },
   {
@@ -60,6 +80,7 @@ const appRouter=createBrowserRouter([
     path: "/reset-password",
     element: <ResetPassword/>,
   },
+
 
 
 
